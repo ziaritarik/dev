@@ -5,14 +5,17 @@ let y = 12 ;
 console.log("-----------------and-----------------------");
     let myBoulean = ("true and true donne : "+ (x>3 && y<10));
     console.log(myBoulean)
+
 console.log("-----------------or-----------------------");
     let  Boulean = ("true or true donne : "+ (x>3 || y<10));
     console.log(Boulean)
+
 console.log("-----------------and/or-----------------------");
     console.log("true || true donne : "+(true && true));
     console.log("true || false donne : "+(true && false));
     console.log("false || true donne : "+(false && true));
     console.log("false || false donne : "+(false && false));
+    
     console.log("------------------");
     console.log("true || true donne : "+true || true);
     console.log("true || false donne : "+true || false);
@@ -100,3 +103,47 @@ for (let num = 0; nu < 5 ; num++){
 }
 
 //Les fonctions
+
+function name(paramter1,paramter2,etc){
+    //Code A Excuter
+    return Result;
+}
+
+
+// Syntaxe des fonctions en Java script  
+    // function name (parameter1,parameter2, etc ...)
+    //    {
+    //            Code à Executer;
+    //            return Result;
+    //     }
+    console.log(" fait appelle a une function ----------------------");
+
+    function fname(x,y){
+       let Result=x+y;
+       return Result;
+    }
+    console.log(fname(10,12));
+    
+    
+    
+    
+    let a =5;
+    let b = 6;
+    
+    function multiply(number1,number2){
+        return number1*number2;
+    }
+    
+    console.log(" fait appelle a une function et affecte ----------------------");
+    var result = multiply(a,b);
+    console.log(result);
+    
+    
+    console.log(" fait appelle a une function et affecte trois variable ----------------------");
+    function multi(num1,num2,num3){
+        return num1*num2*num3;
+    }
+    
+    let result1 = multi(a,b,a);
+    console.log(result1);
+    
