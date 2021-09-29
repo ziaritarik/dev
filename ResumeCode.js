@@ -147,3 +147,55 @@ function name(paramter1,paramter2,etc){
     let result1 = multi(a,b,a);
     console.log(result1);
     
+
+        
+    // scope des variables
+    function multiply(number1,number2,number3){
+        resultMultiply =number1*number2*number3;
+        return resultMultiply;
+    }
+    let a =5;
+    let b =6;
+
+    let result =multiply(a,b,a);
+    console.log(resultMultiply);
+
+
+        
+    //array ou bien en français les Tableaux (chaine de caractère)
+
+    let fruits=["Pomme","banane","Citron","Orange","kaki"];
+
+    console.log(fruits.length);
+    console.log(fruits[0]);
+    console.log(fruits);
+
+    //boucle for pour afficherles  liste des tableaux
+    for(let i=0;i<fruits.length;i++){
+        console.log(fruits[i]);
+        
+    }
+
+    // push() Ajouter un élément sur la table
+    fruits.push("Kiwi");
+    console.log(fruits);
+    
+    //pop() enlever la dernière valeur
+    fruits.pop();
+    console.log(fruits);
+    //
+    let agrumes = fruits.slice(2,4);
+    console.log(agrumes);
+
+    let agrume = fruits.slice(2);
+    console.log(agrume);
+
+    //array ou bien en français les Tableaux (number)
+    let tab=[14,25,36];
+    console.log(tab);
+
+    //array de déff cotenue
+    let myarray =["Pomme",15,true];
+    console.log(myarray)
+
+
