@@ -27,6 +27,17 @@ window.onload= function(){
             ctx = canvas.getContext('2d');
             snakee=new Snake([[6,4],[5,4],[4,4],[3,4],[2,4]],"right");
             appllee=new Apple([10,10]);
+            canvas.width=canasWidth;
+            canvas.height=canvasHeight;
+            canvas.style.border = "30px solid gray";
+            canvas.style.margin="50px auto";
+            canvas.style.display="block";
+            canvas.style.backgroundColor="#ddd"
+            document.body.appendChild(canvas)
+            ctx = canvas.getContext('2d');
+            let centreX=canasWidth/2;
+            let centreY=canvasHeight/2;
+            snakeebar=new SnakeBar([[6,10],[5,10],[4,10],[3,10],[2,10]],"right");
             score =0;
             refreshCanvas();
         }
@@ -99,6 +110,19 @@ window.onload= function(){
         let y=position[1] * blockSize;
         ctx.fillRect(x,y,blockSize,blockSize);
     }
+
+    function SnakeBar(body){
+        this.body=body;
+        this.draw=function(){
+            ctx.save();
+            ctx.fillStyle = "#ff0000";
+            for(let i=0;i<this.body.length;i++){
+                drawBlock(ctx,this.body[i]);
+            }
+            ctx.restore();
+        }
+    }
+
 
     function Snake(body,direction)
     {
