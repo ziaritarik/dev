@@ -27,17 +27,8 @@ window.onload= function(){
             ctx = canvas.getContext('2d');
             snakee=new Snake([[6,4],[5,4],[4,4],[3,4],[2,4]],"right");
             appllee=new Apple([10,10]);
-            canvas.width=canasWidth;
-            canvas.height=canvasHeight;
-            canvas.style.border = "30px solid gray";
-            canvas.style.margin="50px auto";
-            canvas.style.display="block";
-            canvas.style.backgroundColor="#ddd"
-            document.body.appendChild(canvas)
             ctx = canvas.getContext('2d');
-            let centreX=canasWidth/2;
-            let centreY=canvasHeight/2;
-            snakeebar=new SnakeBar([[6,10],[5,10],[4,10],[3,10],[2,10]],"right");
+            snakeebar=new SnakeBar([[10,10],[9,10],[9,10],[8,10],[7,10],[6,10],[5,10],[4,10],[3,10],[2,10],[1,10],[0,10]],"right");
             score =0;
             refreshCanvas();
         }
@@ -60,7 +51,9 @@ window.onload= function(){
             }
             ctx.clearRect(0,0,canasWidth,canvasHeight);
             drawScore();
+            
             snakee.draw();
+            snakeebar.draw();
             appllee.draw();
             timeout=setTimeout(refreshCanvas,delay);
         }   
@@ -115,7 +108,7 @@ window.onload= function(){
         this.body=body;
         this.draw=function(){
             ctx.save();
-            ctx.fillStyle = "#ff0000";
+            ctx.fillStyle = "blanc";
             for(let i=0;i<this.body.length;i++){
                 drawBlock(ctx,this.body[i]);
             }
